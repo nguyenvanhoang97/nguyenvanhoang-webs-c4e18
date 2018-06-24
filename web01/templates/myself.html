@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Myself</title>
+</head>
+<body>
+    {% for i in info %}
+
+        <h3>Info</h3>
+        <p>Name : {{ i.name }}</p>
+        <p>Age : {{ i.age }}</p>
+        <p>Address : {{ i.address }}</p>
+    
+    {% endfor %}
+
+</body>
+</html>
