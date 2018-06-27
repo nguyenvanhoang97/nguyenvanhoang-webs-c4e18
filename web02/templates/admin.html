@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin</h1>
+    <table border = "1px">
+        <thead>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Năm sinh</th>
+            <th>Giới Tính</th>
+            <th>Chiều cao</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Trạng thái</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for service in all_service %}
+                <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ service.name }}</td>
+                        <td>{{ service.yob }}</td>
+                        {% if service.gender == 0 %}
+                            <td>Nữ</td>
+                        {% else %}
+                            <td>Nam</td>
+                        {% endif %}
+                        <td>{{ service.height }}</td>
+                        <td>{{ service.phone }}</td>
+                        <td>{{ service.address }}</td>
+                        {% if service.status == True %}
+                            <td>Rảnh</td>
+                        {% else %}
+                            <td>Bận</td>
+                        {% endif %}
+                        <td><a href="">Sửa</a></td>
+                        <td><a href="{{ url_for('dele' , service_id = service.id) }}">Xóa</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

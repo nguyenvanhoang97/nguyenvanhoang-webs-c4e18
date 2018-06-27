@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form method="post">
+            <label>Tên</label>
+            <input type="text" name="name" value="{{ service.name }}">
+    
+            <label>Năm sinh</label>
+            <input type="text" name="yob" value="{{ service.yob }}">
+    
+            <label>Địa chỉ</label>
+            <input type="text" name="address" value="{{ service.address }}">
+
+            {% if service.gender == 0 %}
+                <label><input type="radio" name="gender" value="1">Male</label>
+    
+                <label><input type="radio" name="gender" value="0" checked>Female</label>
+            {% else %}
+                <label><input type="radio" name="gender" value="1" checked>Male</label>
+    
+                <label><input type="radio" name="gender" value="0" >Female</label>
+            {% endif %}
+
+            <label>Số điện thoại</label>
+            <input type="text" name="phone" value="{{ service.phone }}">
+
+            <label>Chiều cao</label>
+            <input type="text" name="height" value="{{ service.height }}">
+
+            <label>Mô tả</label>
+            <input type="text" name="description" value="{{ service.description }}">
+    
+            <button type="submit">Update</button>
+        </form>
+</body>
+</html>
