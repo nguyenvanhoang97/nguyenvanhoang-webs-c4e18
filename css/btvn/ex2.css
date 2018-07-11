@@ -109,7 +109,7 @@
 .content2 {
     display: flex;
     background-color: lightblue;
-    height: 6%;
+    height: 10%;
     width: 100%;
 }
 
@@ -128,7 +128,7 @@
 .content3 {
     display: flex;
     background-color: white;
-    height: 44%;
+    height: 45%;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -137,20 +137,20 @@
 
 .bg-yellow {
     background-color: yellow;
-    height: 39%;
-    width: 23%;
+    height: 40%;
+    width: 20%;
 }
 
 .bg-orange {
     background-color: sandybrown;
-    height: 59%;
-    width: 23%; 
+    height: 60%;
+    width: 20%; 
 }
 
 .footer {
     display: flex;
     background-color: gray;
-    height: 9%;
+    height: 10%;
     width: 100%;
     flex-wrap: wrap;
 }
